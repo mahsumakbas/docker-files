@@ -1,0 +1,10 @@
+add following param to the file if it is internal without https:
+/etc/docker/daemon.json
+
+{
+  "insecure-registries" : ["REG_IP_ADDR:5000"]
+}
+
+
+To test:
+curl http://localhost:5000/v2/_catalog
